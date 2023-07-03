@@ -56,7 +56,7 @@ https://dashboard.emailjs.com/admin/templates
 #
 after after setting up the email templates, we can try a demo to get the syntax
 ```javascript
-emailjs.send("service_xgg695s","template_v97mxwj",{
+emailjs.send("serviceId","templateId",{
 from_name: "fromUser",
 to_name: "toUser",
 message: "message",
