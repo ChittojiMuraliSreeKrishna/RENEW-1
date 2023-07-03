@@ -49,6 +49,9 @@ add the following to index.html
 ```
 !. if we want to send the emails first we have configure the email services
 https://dashboard.emailjs.com/admin
+
+<br />
+
 2. then we have to set the email templates
 https://dashboard.emailjs.com/admin/templates
 #
