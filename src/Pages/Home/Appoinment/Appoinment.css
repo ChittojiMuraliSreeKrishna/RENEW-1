@@ -1,9 +1,13 @@
 .appoinment-wrapper {
     padding-bottom: 120px;
     width: 40%;
-    height: 600px;
+    height: 75%;
     background-color: #ffffffdf;
     border-radius: 15px;
+}
+
+@media screen {
+    
 }
 
 .row {
@@ -26,14 +30,22 @@
     height: 68px;
     border: none;
     line-height: 68px;
-    width: 600px;
+    width: 100%;
     color: #666;
     font-size: 16px;
     font-weight: 300;
     margin-top: 30px;
     padding: 0 20px;
 }
-
+.form_pad{
+    padding:6%;
+}
+.btn_cross{
+    background-color: transparent;
+    border: 0px solid #fff;
+    cursor: pointer;
+    font-size: 30px;
+}
 textarea {
     min-height: 300px;
     overflow: auto;
@@ -46,4 +58,10 @@ textarea {
 
 .form-btn:hover {
     border: 1px solid #54BFDC !important;
+}
+@media screen and (min-width: 700px){
+    
+}
+@media screen and (max-width: 700px){
+    
 }

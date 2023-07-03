@@ -27,8 +27,7 @@ const Home = () => {
            <Banner />
            {appoint ?
             <div className='appoint-container'>
-                <button className='appoint-button' onClick={() => setAppoint(!appoint)}>x</button>
-             <Appoinment />
+             <Appoinment onClose={() => setAppoint(!appoint)} />
             </div> :
             <div>
            <Feature />

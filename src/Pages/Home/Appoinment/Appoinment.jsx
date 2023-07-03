@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Appoinment.css';
 import emailjs from '@emailjs/browser'
 
-const Appoinment = () => {
+const Appoinment = (props) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -41,11 +41,19 @@ const Appoinment = () => {
             <Container>
                 <Row>
                     <Col sm={12} md={12}>
-                        <div className="section-title">
-                            <h1 className="mt-5">Request Appointment</h1>
+                        <div className='row'>
+                            <div className='col-11 col-sm-9'>
+                            <div className="">
+                            <h1 className="mt-5 text-left pt-2">Request Appointment</h1>
                         </div>
+                            </div>
+                            <div className='col-1 col-sm-3'>
+                            <button className='mt-5 btn_cross' onClick={() => props.onClose()}>x</button>
+                            </div>
+                        </div>
+                     
                         <div className="appoinment-form">
-                            <form action="#" className="row1" onSubmit={sendEmail}>
+                            <form action="#" className="row1 form_pad" onSubmit={sendEmail}>
                                     <input type="text" placeholder="Name"  value={name} onChange={(e) => setName(e.target.value)} />
                                     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     <input type="phone" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
@@ -59,7 +67,7 @@ const Appoinment = () => {
                                 <button type='submit' className='theme-btn btn-fill form-btn mt-5'>send</button>
                             </form>
                         </div>
-                    </Col>
+                </Col>
                 </Row>
             </Container>
         </section>
