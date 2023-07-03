@@ -1,0 +1,26 @@
+.appoint-container {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.appoint-button {
+    font-size: 30px;
+    color: #000;
+    position: absolute;
+    left: 67%;
+    top: 22%;
+    border-radius: 50%;
+    border: 0px;
+    background-color: transparent;
+}
