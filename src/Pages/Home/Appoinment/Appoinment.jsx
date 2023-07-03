@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Appoinment.css';
+import emailjs from '@emailjs/browser'
 
 const Appoinment = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [config, setConfig] = useState({
-        userName: "cskrishna@gmail.com",
-        password: "F664B9E115AF78A3A269882E5E9DA0BE420C",
-        host: "smtp.elasticemail.com",
-        port: 2525,
-    })
+    const [message, setMessage] = useState("");
+    // const [config, setConfig] = useState({
+    //     userName: "cskrishna@gmail.com",
+    //     password: "F664B9E115AF78A3A269882E5E9DA0BE420C",
+    //     host: "smtp.elasticemail.com",
+    //     port: 2525,
+    // })
 
     const sendEmail = (event) => {
         event.preventDefault();
@@ -21,14 +23,18 @@ const Appoinment = () => {
             To: 'kadalv35@gmail.com',
             Subject: name,
             Body: phone,
-            SecureToken: "decff732-3142-4b74-be13-ec940e8dfa52"
         }
         console.log(emailInfo)
-        if(window.Email) {
-            window.Email.send(emailInfo).then((message) => {
-                alert(message)
-            })
-        }
+        // if(window.Email) {
+        //     window.Email.send(emailInfo).then((message) => {
+        //         alert(message)
+        //     })
+        // }
+        emailjs.send("service_xgg695s","template_v97mxwj",{
+            from_name: name,
+            to_name: "kadali",
+            message: message + ", My Mobile Number is +91" + phone,
+            }, "MfUwZpiWLQ-d-QCEw");
     }
     return (
         <section className="appoinment-wrapper">
@@ -43,13 +49,14 @@ const Appoinment = () => {
                                     <input type="text" placeholder="Name"  value={name} onChange={(e) => setName(e.target.value)} />
                                     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     <input type="phone" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                    <input type="text" placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} />
                                 {/* <Col md={6} lg={6}>
                                     <input type="text" placeholder="Subject" />
                                 </Col> */}
                                 <Col md={12} lg={12}>
                                      {/* <textarea name="Message" id="" cols="30" rows="10" placeholder="Message"></textarea> */}
                                 </Col>
-                                <button type='submit'>send</button>
+                                <button type='submit' className='theme-btn btn-fill form-btn mt-5'>send</button>
                             </form>
                         </div>
                     </Col>
