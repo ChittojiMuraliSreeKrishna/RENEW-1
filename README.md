@@ -57,9 +57,9 @@ https://dashboard.emailjs.com/admin/templates
 after after setting up the email templates, we can try a demo to get the syntax
 ```javascript
 emailjs.send("service_xgg695s","template_v97mxwj",{
-from_name: "murali",
-to_name: "kadali",
-message: "hey there i am",
+from_name: "fromUser",
+to_name: "toUser",
+message: "message",
 }, 'public_key');
 ```
 
