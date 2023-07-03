@@ -27,9 +27,14 @@ to deploy the app to firebase
 npm run build
 ```
 later deploy the app using this command
+first we have to initialize firebase
+```javascript
+firebase init
+```
+select the options clearly, later we can deploy
 
 ```javascript
-firebase deploy
+firebase deploy --only hosting
 ```
 
 ### EmailJs :-
