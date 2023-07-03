@@ -47,9 +47,9 @@ add the following to index.html
    })();
 </script>
 ```
-if we want to send the emails first we have configure the email services
+!. if we want to send the emails first we have configure the email services
 https://dashboard.emailjs.com/admin
-then we have to set the email templates
+2. then we have to set the email templates
 https://dashboard.emailjs.com/admin/templates
 #
 after after setting up the email templates, we can try a demo to get the syntax
