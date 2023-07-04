@@ -1,18 +1,29 @@
 .appoint-container {
     content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  height: 100%;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150vh;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
     display: grid;
     place-items: center;
-    overflow: hidden;
+  }
+  
+  .appoint-subcontainer {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
 }
+
 
 .appoint-button {
     font-size: 30px;
