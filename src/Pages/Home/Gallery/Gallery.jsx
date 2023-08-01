@@ -41,6 +41,27 @@ const Gallery = () => {
                             </div>
                         </div>
                     </Col>
+                    <Col md={6} lg={4} sm={12}>
+                        <div className="single-item-box">
+                            <div className="thumbnail">
+                                <img src={g1} alt="" className="img-fluid" />
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md={6} lg={4} sm={12}>
+                        <div className="single-item-box">
+                            <div className="thumbnail">
+                                <img src={g2} alt="" className="img-fluid" />
+                            </div>
+                        </div>
+                    </Col>
+                    <Col md={6} lg={4} sm={12}>
+                        <div className="single-item-box">
+                            <div className="thumbnail">
+                                <img src={g3} alt="" className="img-fluid" />
+                            </div>
+                        </div>
+                    </Col>
                     <Col md={6} lg={8} sm={12}>
                         <div className="single-item-box">
                             <div className="thumbnail">
